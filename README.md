@@ -46,6 +46,7 @@ This project was created as a **48-hour take-home assignment**.
 ### 3. Start Firebase emulators
 ```bash
   cd ../
+  npm run build
   npx firebase-tools emulators:start --project demo-sobeys-wheel
 ```
 Ports:
