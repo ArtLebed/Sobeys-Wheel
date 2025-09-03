@@ -1,7 +1,5 @@
 import React, { useRef } from 'react';
 import { View, Text, StyleSheet, Animated, Easing } from 'react-native';
-import { useNavigation } from "@react-navigation/core";
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { WheelArrow, WheelFace, ResultModal } from '../components';
 import { useWheelConfig, useCooldown, useSpin } from '../hooks';
