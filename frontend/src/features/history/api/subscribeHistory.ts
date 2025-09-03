@@ -12,7 +12,16 @@ export function subscribeHistory(uid: string, cb: (rows: HistoryResp[]) => void)
   );
 
   return onSnapshot(q, snap => {
-    const rows = snap.docs.map(d => d.data() as HistoryResp);
+    const rows: HistoryResp[] = snap.docs.map((d) => {
+      const x = d.data();
+      return {
+        spinId: x.spinId,
+        segmentIndex: x.segmentIndex,
+        prize: x.prize,
+        label: x.label,
+        timestamp: x.timestamp.toMillis(),
+      };
+    });
     cb(rows);
   });
 }
